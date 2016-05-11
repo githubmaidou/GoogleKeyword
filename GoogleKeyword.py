@@ -9,7 +9,9 @@ for num in range(76):
 	soup=BeautifulSoup(BDSS(keyword,num))
 	obj=soup.find_all("a",class_="c-showurl")
 	for i in obj:
-		print  i.text
+		print  i.text.encode('utf8')
+		print  i.text.split('/')[0]
+		print  "--------------------"
 
 
 
